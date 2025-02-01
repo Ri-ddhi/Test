@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  /* Body styles */
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  
+  /* Navbar styles */
+
+ 
+  nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  .container {
+    background-color: var(--bg-panel);
+    margin: 5em;
+    padding: 5em;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 80% auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "title switch" "content content";
+  }
+  
+  .container h1 {
+    margin: 0;
+    color: var(--color-headings);
+  }
+  
+  .container p {
+    color: var(--color-text);
+    grid-area: content;
+    font-size: 1.1em;
+    line-height: 1.8em;
+    margin-top: 2em;
+  }
+  
+  input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+  
+  .nav .label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 52px;
+    height: 27px;
+    background: grey;
+    float: right;
+    border-radius: 100px;
+    position: relative;
+  }
+  
+  label:after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+  }
+  
+  input:checked+label {
+    background: var(--color-headings);
+  }
+  
+  input:checked+label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+  }
+  
+  label:active:after {
+    width: 45px;
+  }
+  
+  html.transition,
+  html.transition *,
+  html.transition *:before,
+  html.transition *:after {
+    transition: all 750ms !important;
+    transition-delay: 0 !important;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .left {
+    flex: 1;
+    padding-right: 5px;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  .right {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .menu {
+    list-style-type: none;
+  }
+  
+  .menu li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .menu li:last-child {
+    margin-right: 0;
+  }
+  
+  .menu li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  
+  /* Slider styles */
+  
+  .slider {
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: relative;
+    height: 100%;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+  }
+  
+  .text-overlay h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .text-overlay p {
+    font-size: 24px;
+  }
+  after {
+    clear: both;
+  }
+  
+  .signup {
+    margin: 50px auto;
+    width: 320px;
+  }
+  
+  .signup form {
+    margin: auto;
+    padding: 22px 22px 22px 22px;
+    width: 100%;
+    border-radius: 5px;
+    background: #fff;
+    border-top: 3px solid #4CAF50;
+    border-bottom: 3px solid #4CAF50;
+  }
+  
+  .signup form span {
+    background-color: #4CAF50;
+    border-radius: 3px 0px 0px 3px;
+    border-right: 3px solid #4CAF50;
+    color: #4CAF50;
+    display: block;
+    float: left;
+    line-height: 50px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .signup form input[type=" Register with email"] {
+    background-color: #fff;
+    border-radius: 0px 3px 3px 0px;
+    color: #a9a9a9;
+    margin-bottom: 1em;
+    padding: 0 16px;
+    width: 90%;
+    height: 50px;
+  }
+  
+  .signup form input[type="password"] {
+    background-color: #fff;
+    border-radius: 0px 3px 3px 0px;
+    color: #4CAF50;
+    margin-bottom: 1em;
+    padding: 0 16px;
+    width: 90%;
+    height: 50px;
+  }
+  
+  .signup form input[type="Register"] {
+    background-color: #4CAF50;
+   
+    border: 0;
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  #signup form input[type="Register"]:hover {
+    background: #4CAF50;
+  }
+  
+   
+      /* Styles for Footer */
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+        body {
+          background: white;
+          color: #333;
+          font: 87.5%/1.5em "Open Sans", sans-serif;
+          margin: 0;
+        }
+  
+        p {
+          line-height: 1.5em;
+        }
+        h1{
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+  
+    
+  
+ 
+  
+  
